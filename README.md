@@ -49,86 +49,49 @@ POST /upload_pdfs/ --- Upload one or more PDF files
 
 POST /ask/ --- Ask a question --- Form field: `question`
 
-## 📁 Folder Structure
+## 📁 Project Structure
+```
 TutorAI/
-├── server/
-│   ├── routes/
-│   │   ├── __pycache__/
-│   │   │   ├── ask_question.cpython-313.pyc
-│   │   │   └── upload_pdfs.cpython-313.pyc
-│   │   ├── ask_question.py
-│   │   └── upload_pdfs.py
-│   ├── modules/
-│   │   ├── __pycache__/
-│   │   │   ├── llm.cpython-313.pyc
-│   │   │   ├── load_vectorstore.cpython-313.pyc
-│   │   │   └── query_handlers.cpython-313.pyc
-│   │   ├── llm.py
-│   │   ├── load_vectorstore.py
-│   │   ├── pdf_handlers.py
-│   │   └── query_handlers.py
-│   ├── middlewares/
-│   │   ├── __pycache__/
-│   │   │   └── exception_handlers.cpython-313.pyc
-│   │   └── exception_handlers.py
-│   ├── uploaded_docs/
-│   │   ├── Importance of Software Quality.pdf
-│   │   └── Software Quality.pdf
-│   ├── logger.py
-│   ├── main.py
-│   ├── requirements.txt
-│   └── test.py
-├── client/
-│   ├── __pycache__/
-│   │   └── config.cpython-311.pyc
-│   ├── app.py
-│   ├── config.py
-│   ├── requirements.txt
-│   ├── components/
-│   │   ├── __pycache__/
-│   │   │   ├── chatUI.cpython-311.pyc
-│   │   │   ├── history_download.cpython-311.pyc
-│   │   │   └── upload.cpython-311.pyc
-│   │   ├── chatUI.py
-│   │   ├── history_download.py
-│   │   └── upload.py
-│   └── utils/
-│       ├── __pycache__/
-│       │   └── api.cpython-311.pyc
-│       └── api.py
-├
-├── .gitignore
-├── .python-version
-├── main.py
-└── pyproject.toml
+├── server/                 # Backend FastAPI application
+│   ├── routes/            # API endpoints
+│   ├── modules/           # Core logic (LLM, vectorstore)
+│   ├── middlewares/       # Error handling
+│   └── main.py           # Server entry point
+├── client/                # Frontend Streamlit application
+│   ├── components/        # UI components
+│   ├── utils/            # API client
+│   └── app.py            # Client entry point
+└── pyproject.toml        # Project configuration
+```
 
 
 ## ⚡ Quick Setup
 # Clone the repo
-$ git clone https://github.com/snsupratim/medicalAssistant.git
-$ cd medicalAssistant/server
+git clone https://github.com/Krishalakarki/TutorAI-Chatbot.git
+cd TutorAI/server
 
 # Create virtual env
-$ uv venv
-$ .venv/bin/activate  # Windows: venv\Scripts\activate
+uv venv
+.venv\Scripts\activate
 
 # Install dependencies
-$ uv pip install -r requirements.txt
+uv pip install -r requirements.txt
 
 # Set environment variables (.env)
-GOOGLE_API_KEY=...
 GROQ_API_KEY=...
 PINECONE_API_KEY=...
+PINECONE_INDEX_NAME=..
 
 # Run the server
-$ uvicorn main:app --reload --port 8000
+uvicorn main:app --reload --port 8000
 
 
-$ cd medicalAssistant/client
+cd TutorAI/client
+
 
 # Create virtual env
-$ uv venv
-$ .venv/bin/activate  # Windows: venv\Scripts\activate
+uv venv
+.venv\Scripts\activate
 
 # Install dependencies
 $ uv pip install -r requirements.txt

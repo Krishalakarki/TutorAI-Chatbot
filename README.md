@@ -90,25 +90,25 @@ TutorAI/
 
 
 ## ⚡ Quick Setup
-# Clone the repo
+### Clone the repo
 git clone https://github.com/Krishalakarki/TutorAI-Chatbot.git
 cd TutorAI/server
 
-# Create virtual env
+### Create virtual env
 uv venv
 .venv\Scripts\activate
 
-# Install dependencies
+### Install dependencies
 uv pip install -r requirements.txt
 
-# Set environment variables (.env)
+### Set environment variables (.env)
 GROQ_API_KEY=...
 
 PINECONE_API_KEY=...
 
 PINECONE_INDEX_NAME=..
 
-## Run the server
+### Run the server
 uvicorn main:app --reload --port 8000
 
 ## Frontend Setup

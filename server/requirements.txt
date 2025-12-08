@@ -7,17 +7,19 @@ python-multipart  # for file uploads
 # LangChain & Ecosystem
 langchain
 langchain-community
-langchain-core
+
 langchain-groq
 
 # Vectorstore
-# chromadb
-pinecone
+pinecone-client
+
 
 # Embeddings
+
 sentence-transformers
-# langchain-google-generative-ai
-# langchain-google-genai
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.0+cpu
+
 
 # PDF Parsing
 PyPDF  # backend for PyPDFLoader via langchain_community

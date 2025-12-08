@@ -41,19 +41,19 @@ This improves accuracy, prevents hallucinations, and is ideal for educational co
 
 ## 📚 Features
 
-Upload college PDFs (notes, textbooks, assignments)
+✅ Upload PDFs (notes, textbooks, assignments)
 
-Auto-extracts text and splits into semantic chunks
+✅ Auto-extract text & split into semantic chunks
 
-Embeds chunks using Hugging Face embeddings (sentence-transformers/all-MiniLM-L6-v2)
+✅ Embed chunks using Hugging Face embeddings (all-MiniLM-L6-v2)
 
-Stores embeddings in Pinecone Vector DB 
+✅ Store embeddings in Pinecone Vector DB
 
-Uses Groq (llama-3.1-8b-instant)for accurate responses
+✅ Use Groq LLaMA-3.1-8b-instant for accurate responses
 
-FastAPI backend with endpoints for file upload and asking questions
+✅ FastAPI backend for endpoints
 
-Streamlit frontend for interactive Q&A
+✅ Streamlit frontend for interactive Q&A
 
 ## 🌐 Tech Stack
 
@@ -103,23 +103,24 @@ uv pip install -r requirements.txt
 
 # Set environment variables (.env)
 GROQ_API_KEY=...
+
 PINECONE_API_KEY=...
+
 PINECONE_INDEX_NAME=..
 
-# Run the server
+## Run the server
 uvicorn main:app --reload --port 8000
 
-
+## Frontend Setup
 cd TutorAI/client
 
-
-# Create virtual env
+## Create virtual env
 uv venv
 .venv\Scripts\activate
 
-# Install dependencies
+## Install dependencies
 $ uv pip install -r requirements.txt
 
-# Run the server
+## Run the server
 $ streamlit run app.py
 

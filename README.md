@@ -38,7 +38,7 @@ This improves accuracy, prevents hallucinations, and is ideal for educational co
 ```
 
 ---
-
+```
 ## 📚 Features
 
 ✅ Upload PDFs (notes, textbooks, assignments)
@@ -54,18 +54,18 @@ This improves accuracy, prevents hallucinations, and is ideal for educational co
 ✅ FastAPI backend for endpoints
 
 ✅ Streamlit frontend for interactive Q&A
-
+```
 ## 🌐 Tech Stack
 
 | Component      | Tech Used                                    |
 |----------------|----------------------------------------------|
-| 🧠 LLM        | Groq API (LLaMA3-70B)                        |
+| 🧠 LLM        | Groq API (LLaMA-3.1-8b-instant)                        |
 | 🔤 Embeddings | Hugging Face (all-MiniLM-L6-v2)              |
 | 💾 VectorDB   | Pinecone                                     |
 | 🔗 Framework  | LangChain                                    |
 | ⚙️ Backend    | FastAPI                                      |
 | 🖥️ Frontend   | Streamlit                                    |
-
+|   deployment   | Huggingface Space                            |
 ---
 
 ##  API Endpoints
@@ -87,13 +87,17 @@ TutorAI/
 │   └── app.py            # Client entry point
 └── pyproject.toml        # Project configuration
 ```
-
+```
+## Deployment
+|  https://huggingface.co/spaces/krishala/TutorChatbot |
+``` 
 
 ## ⚡ Quick Setup
-### Clone the repo
+```### Clone the repo
 git clone https://github.com/Krishalakarki/TutorAI-Chatbot.git
 cd TutorAI/server
-
+```
+```
 ### Create virtual env
 uv venv
 .venv\Scripts\activate
@@ -124,3 +128,4 @@ $ uv pip install -r requirements.txt
 ## Run the server
 $ streamlit run app.py
 
+```
